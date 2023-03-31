@@ -1,0 +1,150 @@
+.header__body__left__title {
+   font-family: 'Anglecia Pro Display';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 90px;
+   line-height: 102px;
+   color: var(--main--text);
+   letter-spacing: -0.005em;
+}
+.header__body__wrapper {
+   height: max-content;
+   margin-top: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.header__body__left__subtitle {
+   margin-top: -22px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 21px;
+   line-height: 25px;
+   line-height: 102px;
+   color: var(--main--text);
+}
+
+.header__body__left>div {
+   max-width: 608px;
+   width: 100%;
+}
+
+.header__body__left__subtitle__hr {
+   width: 288px;
+   height: 1px;
+   background-color: var(--main--text);
+}
+
+.header__body__left__subtitle {
+   display: flex;
+   align-items: center;
+   column-gap: 16px;
+}
+
+.header__body__left__toBottom__text {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 23px;
+   letter-spacing: 0.0015em;
+   color: var(--brown);
+}
+
+.header__body__left__toBottom {
+  
+   display: flex;
+   column-gap: 14px;
+   align-items: center;
+}
+
+.header__body__right  {
+   width: 348px;
+   height: 768px;
+  background: url("../assets/images/header/photo\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+@media(max-width: 1080px) {
+   .header__body__left__subtitle {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 30px;
+   }
+   .header__body__left__subtitle__hr {
+      order: 1
+   }
+   .header__body__left__subtitle p {
+      order: 2
+   }
+}
+
+@media(max-width: 992px) {
+   .header__body__left__title {
+      font-size: 60px;
+      line-height: 69px;
+   }
+}
+
+@media(max-width: 830px) {
+   .header__body__left__toBottom {
+      margin-top: 24px;
+      flex-direction: column;
+      row-gap: 10px;
+   }
+   .header__body__left__toBottom__icon {
+      transform: rotate(45deg);
+   }
+   .header__body__left__subtitle__hr {
+      width: 124px;
+      margin-bottom: 26px;
+   }
+   .header__body__right {
+      width: 100%;
+      height: 350px;
+      background-image: url("../assets/images/header/Ana\ səhifə\ 1.png");
+      background-size: 100% 100%
+   }
+   .header__body {
+      width: 100%;
+   }
+   .header__body__wrapper {
+      padding-top: 150px;
+      width: 100%;
+      flex-direction: column;
+      row-gap: 20px;
+   }
+   
+   .header__body__left__subtitle, .header__body__left__title {
+      text-align: center;
+   }
+   .header__body__left__subtitle {
+      align-items: center
+   }
+}
+
+@media(max-width: 620px) {
+   .header__body__right {
+      margin-top: 71px;
+      height: 210px ;
+   }
+   .header__body__left__title {
+      font-size: 44px;
+      line-height: 56px;
+   }
+   .header__body__left__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+   }
+}
+
+@media(max-width: 500px) {
+   .header__body__left {
+      padding: 0 20px;
+   }
+   .header__body .container {
+      padding: 0 0 ;
+   }
+}

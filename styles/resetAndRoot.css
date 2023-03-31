@@ -34,8 +34,10 @@ body {
 
 /* navbar */
 .navbar {
-   padding-top: 28px;
+   padding-top: 18px;
    padding-bottom: 28px;
+   background-color: var(--bg-color);
+  
 }
 .navbar__wrapper, .navbar__links>ul, .navbar__controlls {
    display: flex;
