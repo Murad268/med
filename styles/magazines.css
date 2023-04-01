@@ -1,0 +1,57 @@
+.magazines__title {
+   text-align: center;
+   margin-top: 30px;
+}
+.magazinesPage {
+   padding-top: 60px;
+}
+.magazinesPage__filter {
+   display: flex;
+   align-items: center;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 22px;
+   letter-spacing: 0.0015em;
+}
+.magazinesPage__filter select {
+   margin-right: 10px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 15px;
+   line-height: 22px;
+   letter-spacing: 0.0015em;
+   width: 178px;
+   height: 42px;
+   background: transparent;
+   border: 1px solid #D6C499;
+   border-radius: 3px;
+}
+
+.filter {
+   margin-right: 18px;
+   margin-left: 8px;
+}
+
+.magazinesPage__filter select option {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 15px;
+   line-height: 22px;
+   color: var(--main--text);
+   padding: 0 15px;
+   display: flex;
+   align-items: center;
+   letter-spacing: 0.0015em;
+}
+.magazinesPage__filter select:last-child {
+   width: 86px; 
+}
+@media(max-width: 300px) {
+   .month {
+      width: 86px !important; 
+   }
+}
