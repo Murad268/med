@@ -236,7 +236,6 @@ body {
    font-size: 64px;
    line-height: 75px;
    color: var(--main--text);
-   
    letter-spacing: -0.0025em;
 }
 .load {

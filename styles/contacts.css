@@ -1,0 +1,91 @@
+.contacts__title {
+   text-align: center;
+   margin-top: 30px;
+}
+
+.contacts__map {
+   width: 644px;
+   height: 519px;
+}
+
+.contacts__wrapper {
+   display: flex;
+   padding: 90px;
+}
+
+.contacts__adress__title {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 23px;
+   letter-spacing: 0.0015em;
+   color: var(--brown)
+}
+
+.contacts__adress__box {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 36px;
+   color: var(--main--text)
+}
+.contacts__adressess {
+   border-left: 1px solid var(--brown);
+   padding-left: 34px;
+   margin-left: 38px;
+}
+.contacts__adress {
+   margin-bottom: 25px;
+
+}
+
+.contacts__media {
+   margin-top: 30px;
+}
+.contacts__media__hr {
+   margin-bottom: 30px;
+   width: 379px;
+   height: 1px;
+   background-color: var(--brown)
+}
+
+.contacts__media__wrapper {
+   margin-top: 24px;
+   display: flex;
+   column-gap: 20px
+}
+
+@media(max-width: 1170px) {
+   .contacts__wrapper {
+      margin-top: 54px;
+      padding: 0;
+      flex-direction: column;
+      row-gap: 68.1px;
+   }
+   .contacts__adress__box {
+      min-width: 100%;
+   }
+   .contacts__map {
+      order: 2
+   }
+   .contacts__adressess {
+      padding: 0;
+      border: none;
+   }
+   .contacts__map {
+      width: 100%;
+      height: 539px;
+   }
+   .contacts__map iframe {
+      width: 100%;
+      height: 100%;
+   }
+}
+
+@media(max-width: 768px) {
+   .contacts__media__hr {
+      display: none;
+   }
+}
