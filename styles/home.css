@@ -71,15 +71,8 @@
 .magazines {
    padding-top: 170px;
 }
-.magazines__title {
-   font-family: 'Anglecia Pro Display';
-   font-style: normal;
-   font-weight: 400;
-   font-size: 64px;
-   line-height: 75px;
-   color: var(--main--text);
+.magazines .custome__title {
    text-align: center;
-   letter-spacing: -0.0025em;
 }
 .magazines__wrapper {
    margin-top: 50px;

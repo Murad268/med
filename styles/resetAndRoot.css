@@ -229,6 +229,16 @@ body {
 
 
 /* mini blocks */
+.custome__title {
+   font-family: 'Anglecia Pro Display';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 64px;
+   line-height: 75px;
+   color: var(--main--text);
+   
+   letter-spacing: -0.0025em;
+}
 .load {
    width: 220px;
    height: 62px;
