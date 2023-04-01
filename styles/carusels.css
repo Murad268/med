@@ -21,4 +21,12 @@
    .footer__carusel a {
       height: 55px;
    }
+   .footer__carusel a img {
+      height: 100%;
+      object-fit: fill
+   }
+}
+
+@media(max-width: 450px) {
+
 }

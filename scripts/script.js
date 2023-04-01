@@ -86,3 +86,89 @@ $('.footer__carusel').slick({
 	],
 })
 
+
+const images = [
+   {
+      id: 1,
+      src: "../assets/images/magazine/mc-3-2022-sayt_page-0004 1.png"
+   },
+   {
+      id: 2,
+      src: "../assets/images/magazine/mc-3-2022-sayt_page-0004 1 (1).png"
+   },
+   {
+      id: 3,
+      src: "../assets/images/magazine/mc-3-2022-sayt_page-0005 1.png"
+   }
+]
+
+const buttonRight = document.querySelector(".mag__right");
+const buttonLeft = document.querySelector(".mag__left");
+const img = document.querySelector(".magazinee img");
+let count = 1;
+
+
+   function sliderMovie() {
+     if(window.innerWidth>600) {
+         if(count<images.length) {
+            buttonRight.style.display="block";
+         } else {
+            buttonRight.style.display="none";
+         }
+         if(count>1) {
+            buttonLeft.style.display="block";
+         } else {
+            buttonLeft.style.display="none";
+         }
+     }
+   }
+   sliderMovie();
+
+
+
+function currentSlider() {
+   document.querySelector(".magazine__pag__current").textContent = count;
+   document.querySelector(".magazine__pag__all").textContent = images.length;
+}
+currentSlider()
+buttonRight.addEventListener("click", () => {
+
+   count++;
+   currentSlider()
+   console.log(count)
+   sliderMovie()
+   img.src = images[count-1].src
+});
+
+buttonLeft.addEventListener("click", () => {
+
+   count--;
+   currentSlider()
+   sliderMovie()
+   img.src = images[count-1].src
+});
+
+
+const myElement = document.querySelector('.magazine__sliderPage__box');
+
+const hammer = new Hammer(myElement);
+
+hammer.on('swipeleft', function(event) {
+   if(count<images.length) {
+      count++;
+      currentSlider()
+      img.src = images[count-1].src
+   }
+  
+});
+
+hammer.on('swiperight', function(event) {
+   if(count>1) {
+      console.log(count)
+      count--;
+      currentSlider()
+      img.src = images[count-1].src
+   }
+
+ 
+});
