@@ -138,6 +138,56 @@
 .magazines .load {
    margin: 50px auto 0 auto;
 }
+
+.about {
+   margin-top: 110px;
+   padding: 90px 0 57px 0;
+   background: #363531
+}
+.about__title {
+   display: flex;
+   align-items: center;
+   column-gap: 22px
+}
+.about__title h3 {
+   font-family: 'Anglecia Pro Display';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 64px;
+   line-height: 75px;
+   color: var(--bg-color);
+   letter-spacing: -0.0025em;
+}
+.about__title__hr {
+   margin-top: 20px;
+   width: 780px;
+   height: 1px;
+   background-color: var(--bg-color);
+}
+.about__desc {
+   margin-top: 45px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 36px;
+   color: var(--bg-color);
+   text-align: justify;
+   letter-spacing: 0.0015em;
+}
+.about__more {
+   margin-top: 30px;
+   align-items: center;
+   column-gap: 14px;
+   display: flex;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 23px;
+   letter-spacing: 0.0015em;
+   color: var(--hover-red);
+}
 @media(max-width: 1080px) {
    .header__body__left__subtitle {
       flex-direction: column;
@@ -201,6 +251,20 @@
    }
 }
 @media(max-width: 620px) {
+   .about__title {
+      flex-direction: column;
+   }
+   .about__title__hr {
+      width: 124px;
+   }
+   .about__title h3 {
+      font-size: 40px;
+      line-height: 56px;
+   }
+   .about__desc {
+      font-size: 15px;
+      line-height: 26px;
+   }
    .header__body__right {
       margin-top: 71px;
       height: 210px ;
@@ -216,6 +280,12 @@
 }
 
 @media(max-width: 500px) {
+   .about__more img {
+      width: 60px;
+      height: 60px;
+      object-fit: fill;
+   }
+   
    .magazine__image {
       height: 428px;
    }
@@ -227,5 +297,23 @@
    }
    .magazines .load {
       width: 100%;
+   }
+}
+
+@media(max-width: 340px) {
+   .magazines__wrapper {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   }
+   .magazine__image {
+      height: 300px;
+   }
+   .about__title h3 {
+      font-size: 20px;
+      line-height: 26px;
+   }
+   .about__desc {
+      font-size: 11px;
+      line-height: 20px;
+      text-align: left;
    }
 }

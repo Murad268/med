@@ -12,7 +12,9 @@ ul, ol {
 a {
    text-decoration: none;
 }
-
+h1, h2, h3, h4, h5, h6 {
+   line-height: 0;
+}
 body {
    background-color: var(--bg-color);
 }
@@ -183,7 +185,7 @@ body {
 }
 .navbar__search__block__active {
    position: absolute;
-   top: 40px;
+   top: 30px;
    display: flex;
    right: 80px;
    padding-right: 40px;
