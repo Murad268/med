@@ -50,3 +50,39 @@ exitIcon.addEventListener("click", (e) => {
       document.querySelector(".navbar__controlls__lang").style.display="flex"
    }
 });
+
+
+
+
+
+$('.footer__carusel').slick({
+	infinite: true,
+	slidesToShow: 4,
+	centerMode: false,
+	slidesToScroll: 1,
+	dots: false,
+   arrows: false,
+   autoplay: true,
+   autoplaySpeed: 2000,
+	responsive: [
+		{
+			breakpoint: 1120,
+			settings: {
+				slidesToShow: 3,
+			},
+		},
+      {
+			breakpoint: 882,
+			settings: {
+				slidesToShow: 2,
+			},
+		},
+      {
+			breakpoint: 360,
+			settings: {
+				slidesToShow: 1,
+			},
+		},
+	],
+})
+

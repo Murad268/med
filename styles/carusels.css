@@ -1,0 +1,24 @@
+.footer__carusel a {
+   height: 90px;
+}
+.footer__carusel .slick-list {
+   padding: 0 -10px;
+}
+.footer__carusel a img {
+   height: 100%;
+   width: 100%;
+   object-fit: fill;
+  
+}
+.footer__carusel a {
+   margin-right: 10px;
+}
+.footer__carusel {
+   padding: 60px 0
+}
+
+@media(max-width: 600px) {
+   .footer__carusel a {
+      height: 55px;
+   }
+}
