@@ -221,6 +221,29 @@ body {
    align-items: center;
    margin-left: 46px;
 }
+
+
+
+
+
+/* mini blocks */
+.load {
+   width: 220px;
+   height: 62px;
+   background-color: var(--brown);
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 23px;
+   text-align: center;
+   letter-spacing: 0.0015em;
+   color: var(--bg-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 @media(max-width: 1120px) {
    .container {
       padding: 0 40px;

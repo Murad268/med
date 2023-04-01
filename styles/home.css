@@ -11,7 +11,6 @@
    height: max-content;
    margin-top: 40px;
    display: flex;
-   align-items: center;
    justify-content: space-between;
 }
 .header__body__left__subtitle {
@@ -24,7 +23,9 @@
    line-height: 102px;
    color: var(--main--text);
 }
-
+.header__body__left {
+   padding-top: 155px;
+}
 .header__body__left>div {
    max-width: 608px;
    width: 100%;
@@ -53,7 +54,7 @@
 }
 
 .header__body__left__toBottom {
-  
+   margin-top: -145px;
    display: flex;
    column-gap: 14px;
    align-items: center;
@@ -61,12 +62,82 @@
 
 .header__body__right  {
    width: 348px;
-   height: 768px;
+   height: 700px;
   background: url("../assets/images/header/photo\ 1.png");
   background-repeat: no-repeat;
   background-size: cover
 }
 
+.magazines {
+   padding-top: 170px;
+}
+.magazines__title {
+   font-family: 'Anglecia Pro Display';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 64px;
+   line-height: 75px;
+   color: var(--main--text);
+   text-align: center;
+   letter-spacing: -0.0025em;
+}
+.magazines__wrapper {
+   margin-top: 50px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   column-gap: 22px;
+   row-gap: 68px;
+}
+.magazine__desc {
+   margin-top: 12px;
+}
+.magazine__desc__date {
+   font-family: 'Anglecia Pro Display';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 26px;
+   line-height: 30px;
+   color: var(--main--text);
+}
+.magazine__desc__bottom {
+   margin-top: 12px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 23px;
+   letter-spacing: 0.0015em;
+}
+
+.magazine__image {
+   height: 460px;
+   padding: 16px;
+   border: 2px solid var(--brown)
+}
+.magazine__image>img {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+}
+.magazine__desc__bottom img {
+   margin-left: 10px;
+}
+.magazine__desc__bottom__read {
+   color: var(--hover-red);
+   text-decoration-line: underline; 
+}
+.magazine__desc__bottom__download {
+   color: var(--brown);
+   text-decoration-line: underline; 
+}
+.magazine__desc__bottom {
+   display: flex;
+   column-gap: 30px;
+   margin-top: 12px;
+}
+.magazines .load {
+   margin: 50px auto 0 auto;
+}
 @media(max-width: 1080px) {
    .header__body__left__subtitle {
       flex-direction: column;
@@ -124,7 +195,11 @@
       align-items: center
    }
 }
-
+@media(max-width: 720px) {
+   .magazine__image {
+      height: 628px;
+   }
+}
 @media(max-width: 620px) {
    .header__body__right {
       margin-top: 71px;
@@ -141,10 +216,16 @@
 }
 
 @media(max-width: 500px) {
+   .magazine__image {
+      height: 428px;
+   }
    .header__body__left {
       padding: 0 20px;
    }
    .header__body .container {
       padding: 0 0 ;
+   }
+   .magazines .load {
+      width: 100%;
    }
 }
