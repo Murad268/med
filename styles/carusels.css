@@ -17,3 +17,8 @@
    padding: 60px 0
 }
 
+@media(max-width: 600px) {
+   .footer__carusel a {
+      height: 55px;
+   }
+}

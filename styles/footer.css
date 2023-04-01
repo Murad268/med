@@ -46,7 +46,30 @@
 .footer__links__list:last-child {
    width: 224px;
 }
+.footer__bottom {
+   background: var(--main--text);
+}
+.footer__bottom__wrapper {
+   padding: 15px 0 18px 0;
+   display: flex;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 16px;
+   text-align: center;
+   letter-spacing: 0.0025em;
+   color: var(--bg-color);
+   justify-content: space-between
+}
 
+.footer__bottom hr {
+   width: 100%;
+   background: #73716A
+}
+.footer__links__logo__bottom {
+   display: none;
+}
 @media(max-width: 1120px) {
    .footer__links__logo {
       margin-right: 20px;
@@ -73,6 +96,12 @@
 
 
 @media(max-width: 700px) {
+   .footer__links__logo {
+      order: 2
+   }
+   .footer__links__lists {
+      order: 1
+   }
    .footer__links__list {
       display: none;
    }
@@ -88,7 +117,20 @@
       display: block;
    }
 }
-
+@media(max-width: 660px) {
+   .footer__links__logo {
+      display: none;
+   }
+   .footer__links__logo__bottom {
+      width: max-content;
+      display: block;
+      margin: 20px auto 36px auto;
+   }
+   .footer__bottom__wrapper {
+      flex-direction: column;
+      row-gap: 12px;
+   }
+}
 @media(max-width: 300px) {
    .footer__links__lists>div {
       width: 100%;
