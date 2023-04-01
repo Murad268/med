@@ -86,7 +86,7 @@ body {
    position: fixed;
    top: 0;
    left: 0;
-   width: 100%;
+   right: 0;
 }
 .dropdown {
    position: relative;
@@ -102,9 +102,11 @@ body {
    transition: all 0.5s;
    background-color: white;
    padding: 1px 0 21px 20px;
+   visibility: hidden;
 }
 .dropdown__sub__active {
    opacity: 1;
+   visibility: visible;
 }
 .dropdown__sub>ul>li {
    margin-top: 16px;

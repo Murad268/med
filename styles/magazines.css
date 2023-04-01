@@ -1,6 +1,6 @@
 .magazines__title {
    text-align: center;
-   margin-top: 30px;
+   margin-top: 1px;
 }
 .magazinesPage {
    padding-top: 60px;
@@ -50,7 +50,60 @@
 .magazinesPage__filter select:last-child {
    width: 86px; 
 }
-@media(max-width: 300px) {
+
+.pagination {
+   display: flex;
+   justify-content: center;
+   margin-top: 85px;
+
+ }
+ 
+ .pagination ul {
+   display: flex;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+ .magazines__reulsts {
+   margin-top: 30px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-size: 20px;
+   line-height: 23px;
+   text-align: center;
+   letter-spacing: 0.0015em;
+   color: var(--main--text);
+ }
+ .pagination li {
+   margin: 0 5px;
+ }
+ .pagination i {
+   color: var(--brown);
+ }
+ .pagination a, .pagination span {
+   display: block;
+   padding: 5px 10px;
+   color: var(--main--text);
+   text-decoration: none;
+   background-color: transparent;
+   transition: background-color 0.3s ease;
+ }
+ .active__pag {
+   background-color: #D6C499;;
+ }
+ .pagination a:hover {
+   background-color:  #D6C499;
+
+ }
+ 
+ .pagination span {
+   color: #aaa;
+ }
+ 
+
+
+
+@media(max-width: 350px) {
    .month {
       width: 86px !important; 
    }
