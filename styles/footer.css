@@ -13,8 +13,11 @@
    line-height: 22px;
    color: var(--bg-color);
    letter-spacing: 0.0015em;
+   transition: all 0.4s;
 }
-
+.footer__links__list>li>a:hover {
+   color: var(--hover-red)
+}
 .footer__links__lists>div:first-child {
    display: flex;
    column-gap: 69px
@@ -23,11 +26,21 @@
    display: flex;
    justify-content: space-between;
 }
-
-.footer__links__social i {
-   color: var(--bg-color)
+.footer__links__social {
+   cursor: pointer;
+   transition: all 0.3s;
 }
-
+.footer__links__social i {
+   color: var(--bg-color);
+   transition: all 0.3s;
+}
+.footer__links__social:hover  {
+   color: var(--hover-red);
+   border-color: var(--hover-red);
+}
+.footer__links__social:hover i {
+   color: var(--hover-red)
+}
 .footer__links__socials {
    display: flex;
    column-gap: 18px

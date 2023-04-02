@@ -34,7 +34,9 @@
    margin-right: 18px;
    margin-left: 8px;
 }
-
+.magazinesPage__filter select {
+   color: #908D7E
+}
 .magazinesPage__filter select option {
    font-family: 'Raleway';
    font-style: normal;
@@ -47,6 +49,7 @@
    align-items: center;
    letter-spacing: 0.0015em;
 }
+
 .magazinesPage__filter select:last-child {
    width: 86px; 
 }

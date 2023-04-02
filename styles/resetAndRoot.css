@@ -121,11 +121,13 @@ body {
    color: var(--main--text);
    letter-spacing: 0.0015em;
 }
-
+.dropdown__sub>ul>li>a:hover {
+   color: var(--brown)
+}
 .navbar a {
    transition: 0.4s all;
 }
-.navbar a:hover {
+.navbar a:hover, .navbar li:hover {
    color: var(--hover-red);
 }
 .dropdown img {
@@ -164,8 +166,7 @@ body {
 .navbar__hamburger {
    display: none;
    width: 26px;
-   height: 18px;
-  
+   height: 18px; 
 }
 .navbar__hamburger span {
    display: block;
