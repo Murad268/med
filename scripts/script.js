@@ -209,11 +209,21 @@ mini__dropdown__link.addEventListener("click", () => {
 })
 
 const magazine__image = document.querySelectorAll(".magazine__image");
-magazine__image.forEach(element => {
-   element.addEventListener("click", () => {
-      window.location.href = "magazine.html"
+const magazine__desc__bottom__read = document.querySelectorAll(".magazine__desc__bottom__read>div");
+if(magazine__image) {
+   magazine__image.forEach(element => {
+      element.addEventListener("click", () => {
+         window.location.href = "magazine.html"
+      })
    })
-})
+}
+if(magazine__desc__bottom__read) {
+   magazine__desc__bottom__read.forEach(element => {
+      element.addEventListener("click", () => {
+         window.location.href = "article.html"
+      })
+   })
+}
 
 
 

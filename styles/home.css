@@ -143,6 +143,7 @@
 .magazine__desc__bottom__read {
    color: var(--hover-red);
    text-decoration-line: underline; 
+   cursor: pointer;
 }
 .magazine__desc__bottom__download {
    color: var(--brown);
