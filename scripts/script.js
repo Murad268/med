@@ -183,15 +183,27 @@ caruselMag(imagesAr, img2);
 
 
 function openMenu(openTrigger, menuSelector, closeSelector, activeClass) {
-   const openBtn = document.querySelector(openTrigger);
-   const menu = document.querySelector(menuSelector);
-   const closeBtn = document.querySelector(closeSelector);
-
-   openBtn.addEventListener("click", () => {
+   const btn = document.querySelector(openTrigger),
+         menu = document.querySelector(menuSelector),
+         close = document.querySelector(closeSelector);
+   
+   btn.addEventListener("click", () => {
       menu.classList.add(activeClass);
-   });
-
-   closeBtn.addEventListener("click", () => {
+      document.body.style.overflow = "hidden"
+   })
+   close.addEventListener("click", () => {
       menu.classList.remove(activeClass);
-   });
+      document.body.style.overflow = "auto"
+   })
 }
+
+openMenu(".navbar__hamburger", ".mini__menu", ".mini__menu i", "mini__menu__active");
+
+
+
+const mini__dropdown__link = document.querySelector(".mini__dropdown__link");
+const mini__ropdown__sub = document.querySelector(".mini__ropdown__sub");
+
+mini__dropdown__link.addEventListener("click", () => {
+   mini__ropdown__sub.classList.toggle("mini__ropdown__sub__active")
+})

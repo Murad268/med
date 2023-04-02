@@ -60,7 +60,16 @@ body {
 .mini__menu>ul>li {
    margin-bottom: 20px;
 }
-.mini__menu>ul>li>a {
+.mini__ropdown__sub {
+   margin-top: 20px;
+   display: none;
+   padding-left: 20px;
+}
+.mini__ropdown__sub__active {
+   display: block
+}
+.mini__dropdown 
+.mini__ropdown__sub>ul>li>a {
    font-family: 'Raleway';
    font-style: normal;
    font-weight: 500;
@@ -69,12 +78,24 @@ body {
    letter-spacing: 0.0015em;
    color: var(--main--text)
 }
+.mini__menu>ul>li>a {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   letter-spacing: 0.0015em;
+   color: var(--main--text)
+} 
+.mini__ropdown__sub li {
+   margin-bottom: 20px;
+}
 .navbar {
    padding-top: 18px;
    padding-bottom: 28px;
    background-color: var(--bg-color);
-  
 }
+
 .navbar__wrapper, .navbar__links>ul, .navbar__controlls {
    display: flex;
    align-items: center;
@@ -201,6 +222,7 @@ body {
    display: none;
    width: 26px;
    height: 18px; 
+   cursor: pointer;
 }
 .navbar__hamburger span {
    display: block;
