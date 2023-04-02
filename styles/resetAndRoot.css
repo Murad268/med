@@ -35,6 +35,40 @@ body {
 
 
 /* navbar */
+.mini__menu {
+   width: 300px;
+   height: 100vh;
+   background-color: var(--bg-color);
+   position: fixed;
+   top: 0;
+   left: -100%;
+   z-index: 100;
+   padding: 20px 0 0 20px;
+   transition: 0.4s all;
+}
+.mini__menu__active {
+   left: 0
+}
+.mini__menu i {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   font-size: 25px;
+   color: red;
+   cursor: pointer;
+}
+.mini__menu>ul>li {
+   margin-bottom: 20px;
+}
+.mini__menu>ul>li>a {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   letter-spacing: 0.0015em;
+   color: var(--main--text)
+}
 .navbar {
    padding-top: 18px;
    padding-bottom: 28px;
@@ -323,5 +357,12 @@ body {
 @media(max-width: 468px) {
    .container {
       padding: 0 26px;
+   }
+}
+
+
+@media(max-width: 340px) {
+   .mini__menu {
+      width: 100%;
    }
 }

@@ -1,55 +1,70 @@
-window.onscroll = function() {stickyNavbar()};
+const navbar = document.querySelector('.navbar');
 
-var navbar = document.querySelector('.navbar');
-var sticky = navbar.offsetTop;
+if (navbar) {
+  const sticky = navbar.offsetTop;
 
-function stickyNavbar() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add('sticky')
-  } else {
-    navbar.classList.remove('sticky');
+  function stickyNavbar() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
+    }
   }
+
+  window.addEventListener('scroll', stickyNavbar);
 }
 
 
 
 
 
-function drop(dropSel, downSel, active) {
-   const drop = document.querySelector(dropSel),
-         down = document.querySelector(downSel);
-         drop.addEventListener("click",(e) => {
-            down.classList.toggle(active)
+
+function drop(parentSelector, subSelector, activeClass) {
+   document.addEventListener('click', (event) => {
+     const drop = event.target.closest(parentSelector);
+ 
+     if (drop) {
+       const sub = drop.querySelector(subSelector);
+ 
+       if (sub) {
+         sub.classList.toggle(activeClass);
+       }
+     }
    });
-}
+ }
+ 
+ drop('.dropdown', '.dropdown__sub', 'dropdown__sub__active');
+ drop('.navbar__controlls__lang', '.navbar__controlls__lang__sub', 'navbar__controlls__lang__sub__active');
+ 
 
-drop(".dropdown", ".dropdown__sub", "dropdown__sub__active");
-drop(".navbar__controlls__lang", ".navbar__controlls__lang__sub", "navbar__controlls__lang__sub__active")
 
 
-
-const searchIcon = document.querySelector(".navbar__controlls__search");
-const exitIcon = document.querySelector(".navbar__search__block__exit");
-searchIcon.addEventListener("click", (e) => {
-   const search = document.querySelector(".navbar__search__block");
-   search.classList.add("navbar__search__block__active");
-   document.querySelector(".navbar__links").style.display="none"
-   document.querySelector(".navbar__controlls__search").style.display="none"
-   document.querySelector(".navbar__controlls__lang").style.display="none"
-
-});
-
-exitIcon.addEventListener("click", (e) => {
-   const search = document.querySelector(".navbar__search__block");
-   search.classList.remove("navbar__search__block__active");
-   document.querySelector(".navbar__controlls__search").style.display="block"
-
-   if(window.innerWidth>992) {
-      document.querySelector(".navbar__links").style.display="block"
-     
-      document.querySelector(".navbar__controlls__lang").style.display="flex"
+ const searchIcon = document.querySelector('.navbar__controlls__search');
+ const searchBlock = document.querySelector('.navbar__search__block');
+ const exitIcon = searchBlock.querySelector('.navbar__search__block__exit');
+ 
+ if (searchIcon && searchBlock && exitIcon) {
+   function showSearch() {
+     searchBlock.classList.add('navbar__search__block__active');
+     document.querySelector('.navbar__links').style.display = 'none';
+     searchIcon.style.display = 'none';
+     document.querySelector('.navbar__controlls__lang').style.display = 'none';
    }
-});
+ 
+   function hideSearch() {
+     searchBlock.classList.remove('navbar__search__block__active');
+     searchIcon.style.display = 'block';
+ 
+     if (window.innerWidth > 992) {
+       document.querySelector('.navbar__links').style.display = 'block';
+       document.querySelector('.navbar__controlls__lang').style.display = 'flex';
+     }
+   }
+ 
+   searchIcon.addEventListener('click', showSearch);
+   exitIcon.addEventListener('click', hideSearch);
+ }
+ 
 
 
 
@@ -87,99 +102,96 @@ $('.footer__carusel').slick({
 })
 
 
-const imagesObj = [
-   {
-      id: 1,
-      src: "../assets/images/magazine/mc-3-2022-sayt_page-0004 1.png"
-   },
-   {
-      id: 2,
-      src: "../assets/images/magazine/mc-3-2022-sayt_page-0004 1 (1).png"
-   },
-   {
-      id: 3,
-      src: "../assets/images/magazine/mc-3-2022-sayt_page-0005 1.png"
-   }
-]
+const imagesObj = [   {      id: 1,      src: "../assets/images/magazine/mc-3-2022-sayt_page-0004 1.png"   },   {      id: 2,      src: "../assets/images/magazine/mc-3-2022-sayt_page-0004 1 (1).png"   },   {      id: 3,      src: "../assets/images/magazine/mc-3-2022-sayt_page-0005 1.png"   }];
 
-const imagesAr = [
-   {
-      id: 1,
-      src: "../assets/images/articles/mc-3-2022-sayt_page-0004 1.png"
-   },
-   {
-      id: 2,
-      src: "../assets/images/articles/mc-3-2022-sayt_page-0005 1.png"
-   }
-]
+const imagesAr = [   {      id: 1,      src: "../assets/images/articles/mc-3-2022-sayt_page-0004 1.png"   },   {      id: 2,      src: "../assets/images/articles/mc-3-2022-sayt_page-0005 1.png"   }];
+
 const img1 = document.querySelector(".magazinee img");
 const img2 = document.querySelector(".article img");
+
 function caruselMag(images, img) {
    const buttonRight = document.querySelector(".mag__right");
    const buttonLeft = document.querySelector(".mag__left");
-   
+   const magazinePageBox = document.querySelector('.magazine__sliderPage__box');
+
+   if (!img || !buttonRight || !buttonLeft || !magazinePageBox) {
+    
+      return;
+   }
+
    let count = 1;
    
-   
-      function sliderMovie() {
-        if(window.innerWidth>600) {
-            if(count<images.length) {
-               buttonRight.style.display="block";
-            } else {
-               buttonRight.style.display="none";
-            }
-            if(count>1) {
-               buttonLeft.style.display="block";
-            } else {
-               buttonLeft.style.display="none";
-            }
-        }
+   function sliderMovie() {
+      if (window.innerWidth > 600) {
+         if (count < images.length) {
+            buttonRight.style.display = "block";
+         } else {
+            buttonRight.style.display = "none";
+         }
+         if (count > 1) {
+            buttonLeft.style.display = "block";
+         } else {
+            buttonLeft.style.display = "none";
+         }
       }
-      sliderMovie();
+   }
    
-   
+   sliderMovie();
    
    function currentSlider() {
       document.querySelector(".magazine__pag__current").textContent = count;
       document.querySelector(".magazine__pag__all").textContent = images.length;
    }
-   currentSlider()
+   
+   currentSlider();
+   
    buttonRight.addEventListener("click", () => {
       count++;
-      currentSlider()
-      console.log(count)
-      sliderMovie()
-      img.src = images[count-1].src
+      currentSlider();
+      sliderMovie();
+      img.src = images[count-1].src;
    });
    
    buttonLeft.addEventListener("click", () => {
       count--;
-      currentSlider()
-      sliderMovie()
-      img.src = images[count-1].src
+      currentSlider();
+      sliderMovie();
+      img.src = images[count-1].src;
    });
    
+   const hammer = new Hammer(magazinePageBox);
    
-   const myElement = document.querySelector('.magazine__sliderPage__box');
-   const hammer = new Hammer(myElement);
    hammer.on('swipeleft', function(event) {
-      if(count<images.length) {
+      if (count < images.length) {
          count++;
-         currentSlider()
-         img.src = images[count-1].src
-      }
-     
-   });
-   hammer.on('swiperight', function(event) {
-      if(count>1) {
-         console.log(count)
-         count--;
-         currentSlider()
-         img.src = images[count-1].src
+         currentSlider();
+         img.src = images[count-1].src;
       }
    });
    
+   hammer.on('swiperight', function(event) {
+      if (count > 1) {
+         count--;
+         currentSlider();
+         img.src = images[count-1].src;
+      }
+   });
 }
 
-caruselMag(imagesObj, img1)
-caruselMag(imagesAr, img2)
+caruselMag(imagesObj, img1);
+caruselMag(imagesAr, img2);
+
+
+function openMenu(openTrigger, menuSelector, closeSelector, activeClass) {
+   const openBtn = document.querySelector(openTrigger);
+   const menu = document.querySelector(menuSelector);
+   const closeBtn = document.querySelector(closeSelector);
+
+   openBtn.addEventListener("click", () => {
+      menu.classList.add(activeClass);
+   });
+
+   closeBtn.addEventListener("click", () => {
+      menu.classList.remove(activeClass);
+   });
+}
