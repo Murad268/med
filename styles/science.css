@@ -1,0 +1,107 @@
+.sciencePage__box {
+   display: flex;
+   column-gap: 32px;
+   /* flex-wrap: wrap; */
+   /* justify-content: space-between; */
+   margin-bottom: 100px;
+}
+.sciencePage {
+   padding-top: 100px;
+}
+.sciencePage__box__img {
+   min-width: 348px;
+   height: 270px;
+}
+
+.sciencePage__box__img img {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+}
+
+.sciencePage__box__desc__body>div {
+   margin-bottom: 26px;
+   display: flex;
+   column-gap: 39px;
+   /* justify-content: space-between; */
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 28px;
+   color: var(--main--text);
+   letter-spacing: 0.0015em;
+}
+.sciencePage__box__desc__body>div>strong {
+   width: 83px;
+   display: block;
+}
+.sciencePage__box__desc__body>div>span {
+   display: block;
+}
+.sciencePage__box__desc__footer {
+   display: flex;
+   column-gap: 69px;
+}
+
+.sciencePage__box__desc {
+   max-width: 615px;
+   width: 100%;
+}
+@media(max-width: 1050px) {
+   .sciencePage__box__desc {
+      padding-left: 20px;
+   }
+}
+@media(max-width: 992px) {
+   .sciencePage__box__desc__body>div {
+      font-size: 13px;
+      line-height: 21px;
+      column-gap: 0;
+   }
+}
+
+@media(max-width: 650px) {
+   .sciencePage__box__img {
+      min-width: 100%;
+      /* height: 150px; */
+   }
+   .sciencePage__box {
+      flex-wrap: wrap;
+   }
+   .sciencePage__box__desc {
+      padding: 0;
+      margin-top: 30px;
+   }
+}
+
+@media(max-width: 468px) {
+
+   .sciencePage__box__desc__footer>div {
+      width: 158px;
+      height: 50px;
+      background: var(--brown);
+      display: block;
+      color: var(--bg-color);
+      text-decoration: none;
+      padding: 15px 0 0 32px;
+   }
+   .sciencePage__box__desc__footer>div img {
+      
+   }
+   .sciencePage__box__desc__footer {
+      column-gap: 8px
+   }
+   .sciencePage__box__desc__footer>div {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center
+   }
+}
+
+@media(max-width: 350px) {
+   .sciencePage__box__img {
+      height: 150px;
+   }
+}
