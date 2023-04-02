@@ -271,6 +271,7 @@ body {
    border: none;
    border-bottom: 1px solid var(--brown);
    padding-left: 5px;
+   outline: none;
 }
 
 .navbar__search__block__exit {

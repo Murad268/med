@@ -207,3 +207,24 @@ const mini__ropdown__sub = document.querySelector(".mini__ropdown__sub");
 mini__dropdown__link.addEventListener("click", () => {
    mini__ropdown__sub.classList.toggle("mini__ropdown__sub__active")
 })
+
+const magazine__image = document.querySelectorAll(".magazine__image");
+magazine__image.forEach(element => {
+   element.addEventListener("click", () => {
+      window.location.href = "magazine.html"
+   })
+})
+
+
+
+function goToSearch(formSelector) {
+   const form = document.querySelector(formSelector);
+   if(form) {
+      form.addEventListener("submit", (e) => {
+         e.preventDefault();
+         window.location.href = "searchResults.html"
+      })
+   }
+}
+goToSearch(".searchResults form");
+goToSearch(".navbar__search__block form");

@@ -51,6 +51,14 @@
 .magazinee {
    max-width: 526px;
    width: 100%;
+   display: block;
+}
+.magazine__image {
+   transition: 0.4s all;
+   cursor: pointer;
+}
+.magazine__image:hover {
+   filter: grayscale(60%);
 }
 .magazinee img {
    width: 100%;
