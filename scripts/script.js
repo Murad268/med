@@ -245,7 +245,7 @@ const btn = document.querySelector(".header__body__left__toBottom");
 
 if(magBot && btn) {
    btn.addEventListener("click", () => {
-      const top = magBot.clientHeight + 230;
+      const top = magBot.clientHeight + 40;
       window.scroll({
         top: top,
         behavior: 'smooth'

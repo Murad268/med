@@ -58,6 +58,7 @@
 }
 .header__body__left__toBottom {
    cursor: pointer;
+   display: block;
 }
 .header__body__left__toBottom:hover .header__body__left__toBottom__icon {
    transform: rotate(40deg);
@@ -88,9 +89,9 @@
 .header__body__right  {
    width: 348px;
    height: 700px;
-  background: url("../assets/images/header/photo\ 1.png");
-  background-repeat: no-repeat;
-  background-size: cover
+   background: url("../assets/images/header/photo\ 1.png");
+   background-repeat: no-repeat;
+   background-size: cover
 }
 
 .magazines {
@@ -249,6 +250,11 @@
       font-size: 60px;
       line-height: 69px;
    }
+   .magazines {
+      padding-top: 30px;
+      margin-top: 0px;
+   }
+
 }
 
 @media(max-width: 830px) {
@@ -256,6 +262,12 @@
       margin-top: 24px;
       flex-direction: column;
       row-gap: 10px;
+   }
+   .header__body__left {
+      padding-top: 0px !important;
+   }
+   .header__body__wrapper {
+      padding-top: 80px !important;
    }
    .header__body__left__toBottom__icon {
       transform: rotate(40deg);
@@ -274,7 +286,7 @@
       width: 100%;
    }
    .header__body__wrapper {
-      padding-top: 150px;
+      /* padding-top: 150px; */
       width: 100%;
       flex-direction: column;
       row-gap: 20px;
@@ -308,7 +320,7 @@
       line-height: 26px;
    }
    .header__body__right {
-      margin-top: 71px;
+      margin-top: 21px;
       height: 210px ;
    }
    .header__body__left__title {
@@ -322,6 +334,9 @@
 }
 
 @media(max-width: 500px) {
+   .header__body__wrapper {
+      padding-top: 25px !important;
+   }
    .about__more img {
       width: 60px;
       height: 60px;
