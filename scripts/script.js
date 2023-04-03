@@ -238,3 +238,17 @@ function goToSearch(formSelector) {
 }
 goToSearch(".searchResults form");
 goToSearch(".navbar__search__block form");
+
+
+const magBot = document.querySelector(".header");
+const btn = document.querySelector(".header__body__left__toBottom");
+
+if(magBot && btn) {
+   btn.addEventListener("click", () => {
+      const top = magBot.clientHeight + 230;
+      window.scroll({
+        top: top,
+        behavior: 'smooth'
+      });
+    });
+}
