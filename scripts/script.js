@@ -245,10 +245,20 @@ const btn = document.querySelector(".header__body__left__toBottom");
 
 if(magBot && btn) {
    btn.addEventListener("click", () => {
-      const top = magBot.clientHeight + 40;
-      window.scroll({
-        top: top,
-        behavior: 'smooth'
-      });
+      if(window.innerWidth>830) {
+         const top = magBot.clientHeight + 160;
+         window.scroll({
+            top: top,
+            behavior: 'smooth'
+          });
+      } else {
+         const top = magBot.clientHeight + 10;
+         window.scroll({
+            top: top,
+            behavior: 'smooth'
+          })
+      }
+     
+ 
     });
 }

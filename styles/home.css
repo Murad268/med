@@ -291,7 +291,9 @@
       flex-direction: column;
       row-gap: 20px;
    }
-   
+   .magazines .custome__title {
+      margin-top: 20px;
+   }
    .header__body__left__subtitle, .header__body__left__title {
       text-align: center;
    }
